@@ -15212,7 +15212,7 @@ const {
     mergeConfig: t2,
     create: e2,
   } = ht,
-  Kt = ht.create({ baseURL: "https://api.kabadfactory.com" });
+  Kt = ht.create({ baseURL: "https://api.kabadfactory.com/api" });
 function hs(t) {
   Kt.defaults.headers.common.Authorization = t ? `Bearer ${t}` : void 0;
 }
