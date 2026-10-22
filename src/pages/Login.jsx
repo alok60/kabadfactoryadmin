@@ -13,7 +13,7 @@ export default function Login({ onLogin }) {
     setLoading(true);
     setError("");
     try {
-      const response = await api.post("/admin/auth/login", { identifier, password });
+      const response = await api.post("/admin/auth/login/", { identifier, password });
       setAdminToken(response.data.token);
       localStorage.setItem("kabadAdminToken", response.data.token);
       onLogin(response.data.user);

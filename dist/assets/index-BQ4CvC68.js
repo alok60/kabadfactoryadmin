@@ -15334,7 +15334,7 @@ function Ev({ onLogin: t }) {
     var y, m;
     (d.preventDefault(), s(!0), i(""));
     try {
-      const p = await Kt.post("/admin/auth/login", {
+      const p = await Kt.post("/admin/auth/login/", {
         identifier: e,
         password: a,
       });
