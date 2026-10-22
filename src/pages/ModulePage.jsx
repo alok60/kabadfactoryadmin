@@ -4,7 +4,7 @@ import { CheckCircle2, Edit3, ImageIcon, KeyRound, Plus, Save, Trash2, X } from 
 const emptyByModule = {
   users: { name: "", mobile: "", email: "", password: "", status: "Active" },
   pickups: { customer: "", scrap: "", slot: "", executive: "Unassigned", executiveId: "", status: "Pending" },
-  categories: { category: "", unit: "kg", price: "", description: "", status: "Active", iconUrl: "", iconFile: null, removeIcon: false },
+  categories: { category: "", materialCategory: "Other", unit: "kg", price: "", description: "", status: "Active", iconUrl: "", iconFile: null, removeIcon: false },
   stores: { name: "", address: "", city: "", state: "", pincode: "", status: "Active" },
   pickupCharges: { minDistanceKm: "0", maxDistanceKm: "", pickupCharge: "", status: "Active" },
   pincodeChargeCache: { pincode: "", nearestStore: "", storePincode: "", rawDistanceKm: "", distanceBufferKm: "", chargeableDistanceKm: "", pickupCharge: "", configurationVersion: "", status: "", calculatedAt: "" },
@@ -22,7 +22,7 @@ const emptyByModule = {
 const displayFieldsByModule = {
   pickups: ["id", "customer", "scrap", "slot", "executive", "pickupCharge", "status"],
   users: ["name", "mobile", "email", "status", "passwordAction"],
-  categories: ["iconUrl", "category", "unit", "price", "description", "status"],
+  categories: ["iconUrl", "category", "materialCategory", "unit", "price", "description", "status"],
   stores: ["name", "address", "city", "state", "pincode", "status"],
   pickupCharges: ["minDistanceKm", "maxDistanceKm", "pickupCharge", "distance", "status"],
   pincodeChargeCache: ["pincode", "nearestStore", "storePincode", "rawDistanceKm", "distanceBufferKm", "chargeableDistanceKm", "pickupCharge", "configurationVersion", "status", "calculatedAt"],
@@ -46,7 +46,8 @@ const fieldOptionsByModule = {
   },
   categories: {
     status: ["Active", "Hidden"],
-    unit: ["kg", "piece"]
+    unit: ["kg", "piece"],
+    materialCategory: ["Paper", "Plastic", "Metal", "E-waste", "Glass", "Rubber", "Other", "Textile"]
   },
   stores: {
     status: ["Active", "Hidden"]

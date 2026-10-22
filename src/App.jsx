@@ -63,7 +63,7 @@ const pageConfig = {
     title: "Scrap Categories",
     subtitle: "Database category names, prices, units, and visibility.",
     action: "Add Category",
-    columns: ["Icon", "Category", "Unit", "Price", "Description", "Status"]
+      columns: ["Icon", "Category", "Material Category", "Unit", "Price", "Description", "Status"]
   },
   stores: {
     title: "Store Locations",
