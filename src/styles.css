@@ -159,18 +159,6 @@ nav {
   border: 1px solid #ffc9c5;
 }
 
-.hintBox {
-  border-radius: 8px;
-  padding: 10px 12px;
-  background: #edf5f0;
-  color: #0e6d48;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 800;
-  font-size: 13px;
-}
-
 .loginScreen {
   min-height: 100vh;
   background: #0e3b2e;

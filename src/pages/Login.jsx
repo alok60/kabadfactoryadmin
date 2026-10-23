@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { Lock } from "lucide-react";
 import { api, setAdminToken } from "../api/client.js";
 
 export default function Login({ onLogin }) {
-  const [identifier, setIdentifier] = useState("admin@kabadfactory.com");
-  const [password, setPassword] = useState("Admin@12345");
+  const [identifier, setIdentifier] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -35,18 +34,26 @@ export default function Login({ onLogin }) {
 
         <label>
           <span>Email or mobile</span>
-          <input value={identifier} onChange={(event) => setIdentifier(event.target.value)} required />
+          <input
+            value={identifier}
+            onChange={(event) => setIdentifier(event.target.value)}
+            placeholder="Enter email or username"
+            autoComplete="username"
+            required
+          />
         </label>
 
         <label>
           <span>Password</span>
-          <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} required />
+          <input
+            type="password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            placeholder="Enter password"
+            autoComplete="current-password"
+            required
+          />
         </label>
-
-        <div className="hintBox">
-          <Lock size={16} />
-          Development default: admin@kabadfactory.com / Admin@12345
-        </div>
 
         {error && <div className="errorBox">{error}</div>}
         <button className="primaryButton" type="submit" disabled={loading}>
